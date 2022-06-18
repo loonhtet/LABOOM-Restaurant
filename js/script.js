@@ -17,13 +17,20 @@ function searchwork() {
 
 searchwork();
 
+$('.bottom-cart').on('click',function(){
+  $('.hover-cart').toggle();
+})
+
+
+
 $(document).ready(function () {
   $(".owl-fbowlCS").owlCarousel({
     loop: true,
     margin: 10,
     nav: true,
     dots: false,
-    autoplay: true,
+    // autoplay: true,
+    smartSpeed:2000,
     navText: [
       "<i class='fa-solid fa-arrow-left fbbuttonCS'></i>",
       "<i class='fa-solid fa-arrow-right fbbuttonCS'></i>",
@@ -41,7 +48,7 @@ $(document).ready(function () {
     },
   });
 
-  $(".owl-carousel").owlCarousel({
+  $(".owl-product").owlCarousel({
     loop: true,
     margin: 10,
     nav: true,
@@ -63,6 +70,67 @@ $(document).ready(function () {
       },
     },
   });
+
+  $(".owl-client").owlCarousel({
+    loop: true,
+    nav: true,
+    center: true,
+    dot: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: false,
+      },
+      600: {
+        items: 3,
+      },
+      1000: {
+        items: 2,
+      },
+    },
+  });
+
+  $('.owl-chief').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    smartSpeed: 2000,
+    navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 4
+        }
+    }
+  })
+
+  $(".hello-owl").owlCarousel({
+    nav:true,
+    navText:["<i class='fa-solid fa-arrow-left'></i>","<i class='fa-solid fa-arrow-right'></i>"],
+    loop:true,
+    margin:30,
+    dots:true,
+    autoplay:true,
+    autoplayTimeout:3000,
+    stagePadding:20,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:4
+        },
+        1000:{
+            items:6
+        }
+    }
+  });
+
 });
 
 $(window).on("load", function () {
